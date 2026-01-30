@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+from rate_limiter import RateLimiter
 
 @dataclass(frozen=True)
 class Request:

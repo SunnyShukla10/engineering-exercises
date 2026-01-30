@@ -1,13 +1,5 @@
-from dataclasses import dataclass
-from rate_limiter import RateLimiter
-
-@dataclass(frozen=True)
-class Request:
-    user_id: str
-    endpoint: str
-    timestamp: int   # seconds since epoch (or simulated)
-
-
+from src.rate_limiter import RateLimiter
+from src.models import Request
 class Clock:
     def __init__(self, start: int = 0):
         self._t = start

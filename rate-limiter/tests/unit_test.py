@@ -36,3 +36,6 @@ class TestRateLimiter(unittest.TestCase):
         self.clock.advance(10)  # window boundary
         # now should allow again
         self.assertTrue(self.api.handle("u1", "/search"))
+    
+if __name__ == "__main__": 
+    unittest.main()
